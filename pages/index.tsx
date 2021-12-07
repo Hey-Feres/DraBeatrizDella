@@ -1,11 +1,20 @@
 import React from 'react'
-import { Text } from 'atomize'
+import { Div } from 'atomize'
+import { Navbar } from '../components/Navbar'
+import { MainCard } from '../components/MainCard'
+import { Services } from '../components/Services'
+import { Experience } from '../components/Experience'
+import { Gallery } from '../components/Gallery'
 
 const Home: React.FC = () => {
   return(
-    <Text textSize="display1">
-      This is Home Page
-    </Text>
+    <>
+      <Navbar />
+      <MainCard />
+      <Services />
+      <Experience />
+      <Gallery />
+    </>
   )
 }
 

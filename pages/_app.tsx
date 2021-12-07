@@ -21,10 +21,12 @@ const Main: React.FC<AppProps> = ({ Component, pageProps }) => {
           <PersistGate loading={null} persistor={persistor}>
             <StyleReset />
             <Head>
-              <title>JWT Auth Client</title>
+              <title>Dra. Peituda</title>
               <meta name='viewport' content='initial-scale=1.0, width=device-width' />
               <link rel='preconnect' href='https://fonts.gstatic.com' />
-              <link href='https://fonts.googleapis.com/css2?family=Varela+Round&display=swap' rel='stylesheet' />
+              <link rel="preconnect" href="https://fonts.googleapis.com" />
+              <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+              <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
             </Head>
 
             <Component {...pageProps} />
