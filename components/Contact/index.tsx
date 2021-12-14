@@ -48,7 +48,7 @@ export const Contact: React.FC<Props> = () => {
           lg: '30%'
         }}
       >
-        <ContactIcon image='/images/whatsapp.png' link='https://wa.me/4899468322' />
+        <ContactIcon image='/images/whatsapp.png' link='https://wa.me/554899468322' />
         <ContactIcon image='/images/instagram.png' link='https://www.instagram.com/drabeatrizdella' />
         <ContactIcon image='/images/phone.png' link='tel:4899468322' />
       </Div>

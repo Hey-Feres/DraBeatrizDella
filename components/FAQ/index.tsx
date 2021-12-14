@@ -54,7 +54,7 @@ export const FAQ: React.FC<Props> = () => {
         <FAQCard
           faqId='faq4'
           title='Como faço um agendamento?'
-          content={<p>Você pode agendar uma avaliação diretamente comigo, <a href='https://wa.me/4899468322'>pelo Whatsapp</a> ou <a href='https://www.instagram.com/drabeatrizdella'>pelo Instagram</a>.</p>}
+          content={<p>Você pode agendar uma avaliação diretamente comigo, <a href='https://wa.me/554899468322'>pelo Whatsapp</a> ou <a href='https://www.instagram.com/drabeatrizdella'>pelo Instagram</a>.</p>}
         />
 
         <FAQCard

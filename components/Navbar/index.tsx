@@ -18,7 +18,7 @@ export const Navbar: React.FC<Props> = () => {
     >
       <Image src='/images/NavLogo.png' w='30px' />
 
-      <a href='https://wa.me/4899468322'>
+      <a href='https://wa.me/554899468322'>
         <Button
           bg="white"
           hoverBg="white"
