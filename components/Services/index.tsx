@@ -3,12 +3,12 @@ import { Div, Text, Image } from 'atomize'
 import { SectionTitle } from '../SectionTitle'
 
 interface ServiceCardProps {
-  image: String,
-  alt: String,
-  w: String,
-  h: String,
-  title: String,
-  subtitle: String
+  image: string,
+  alt: string,
+  w: string,
+  h: string,
+  title: string,
+  subtitle: string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subtitle }) => {

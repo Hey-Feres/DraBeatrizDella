@@ -4,8 +4,8 @@ import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
 
 interface ContactIconProps {
-  image: String,
-  link: String
+  image: string,
+  link: string
 }
 
 const ContactIcon: React.FC<ContactIconProps> = ({ image, link }) => {

@@ -6,9 +6,9 @@ import { Section } from '../Section'
 import { isAppleDevice } from '../../utils/isAppleDevice'
 
 interface ServiceCardProps {
-  title: String,
-  content: String,
-  faqId: String
+  title: string,
+  content: string,
+  faqId: string
 }
 
 const FAQCard: React.FC<ServiceCardProps> = ({ title, content, faqId }) => {

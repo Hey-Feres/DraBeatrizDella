@@ -4,12 +4,12 @@ import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
 
 interface GalleryCardProps {
-  image: String,
-  alt: String,
-  w: String,
-  h: String,
-  title: String,
-  subtitle: String
+  image: string,
+  alt: string,
+  w: string,
+  h: string,
+  title: string,
+  subtitle: string
 }
 
 const GalleryCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subtitle }) => {
