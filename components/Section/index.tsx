@@ -1,7 +1,9 @@
 import React from 'react'
 import { Div } from 'atomize'
 
-export const Section: React.FC<MyProps> = (props) => {
+interface Props {}
+
+export const Section: React.FC<Props> = (props) => {
   return(
     <Div
       d='flex'

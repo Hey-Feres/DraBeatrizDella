@@ -1,7 +1,9 @@
 import React from 'react'
 import { Div, Text, Image } from 'atomize'
 
-export const MainCard: React.FC<void> = () => {
+interface Props {}
+
+export const MainCard: React.FC<Props> = () => {
   return(
     <Div
       d='flex'

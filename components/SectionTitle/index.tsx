@@ -2,8 +2,8 @@ import React from 'react'
 import { Div, Text } from 'atomize'
 
 interface SectionTitleProps {
-  title: String,
-  subtitle: String
+  title: string,
+  subtitle: React.ReactNode
 }
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({ title, subtitle }) => {

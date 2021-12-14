@@ -2,7 +2,9 @@ import React from 'react'
 import { Div, Text, Image, Icon } from 'atomize'
 import Link from 'next/link'
 
-export const Footer: React.FC<void> = () => {
+interface Props {}
+
+export const Footer: React.FC<Props> = () => {
   return(
     <Div
       d='flex'

@@ -2,11 +2,13 @@ import React from 'react'
 import { Div, Text, Image } from 'atomize'
 import { SectionTitle } from '../SectionTitle'
 
+interface Props {}
+
 interface ServiceCardProps {
   image: string,
   alt: string,
-  w: string,
-  h: string,
+  w: {},
+  h: {},
   title: string,
   subtitle: string
 }
@@ -65,7 +67,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subt
   )
 }
 
-export const Services: React.FC<void> = () => {
+export const Services: React.FC<Props> = () => {
   return(
     <Div
       d='flex'

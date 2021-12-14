@@ -5,9 +5,11 @@ import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
 import { isAppleDevice } from '../../utils/isAppleDevice'
 
+interface Props {}
+
 interface ServiceCardProps {
   title: string,
-  content: string,
+  content: React.ReactNode,
   faqId: string
 }
 
@@ -15,7 +17,7 @@ const FAQCard: React.FC<ServiceCardProps> = ({ title, content, faqId }) => {
   const [open, setOpen] = useState(false);
 
   return(
-    <Div onClick={() => setOpen(!open)} p={{ x: '1.2rem', y: '1.5rem' }} m={{ b: '1rem' }} w='90%' h='auto' bg='white' shadow='primary' rounded='30px' d='flex' flexDir='column' justify='center' align='center'>
+    <Div style={{ cursor: 'pointer' }} onClick={() => setOpen(!open)} p={{ x: '1.2rem', y: '1.5rem' }} m={{ b: '1rem' }} w='90%' h='auto' bg='white' shadow='primary' rounded='30px' d='flex' flexDir='column' justify='center' align='center'>
       <Div d='flex' justify='space-between' align='center' w='100%'>
         <Text textSize='1.3rem'>{ title }</Text>
 
@@ -40,7 +42,7 @@ const FAQCard: React.FC<ServiceCardProps> = ({ title, content, faqId }) => {
   )
 }
 
-export const FAQ: React.FC<void> = () => {
+export const FAQ: React.FC<Props> = () => {
   return(
     <Section>
       <SectionTitle
@@ -52,31 +54,33 @@ export const FAQ: React.FC<void> = () => {
         <FAQCard
           faqId='faq4'
           title='Como faço um agendamento?'
-          content={['Você pode agendar uma avaliação diretamente comigo, ', <a href='https://wa.me/4899468322'>pelo Whatsapp</a>, ' ou ', <a href='https://www.instagram.com/drabeatrizdella'>pelo Instagram</a>, '.']}
+          content={<p>Você pode agendar uma avaliação diretamente comigo, <a href='https://wa.me/4899468322'>pelo Whatsapp</a> ou <a href='https://www.instagram.com/drabeatrizdella'>pelo Instagram</a>.</p>}
         />
 
         <FAQCard
           faqId='faq1'
           title='Qual minha formação?'
-          content='Formei em 2021 pela Unesc e atualmente curso pós-graduação em Endodontia pela ABDC Magic School'
+          content={<p>Formei em 2021 pela Unesc e atualmente curso pós-graduação em Endodontia pela ABDC Magic School</p>}
         />
 
         <FAQCard
           title='Onde eu atendo?'
-          content={['Estou atendendo no consultório Dra. Renata Dal Molin, na ', <a href={ isAppleDevice() ? 'http://maps.apple.com/?address=907,Rua+Altamiro+Guimarães,Icara,Santa+Catarina' : 'https://goo.gl/maps/gw2uB9q42LW7E6gU7' }> Rua Altamiro Guimarães, 907, Sala 01, em Içara </a>, '.']}
+          content={<p>Estou atendendo no consultório Dra. Renata Dal Molin, na <a href={ isAppleDevice() ? 'http://maps.apple.com/?address=907,Rua+Altamiro+Guimarães,Icara,Santa+Catarina' : 'https://goo.gl/maps/gw2uB9q42LW7E6gU7' }> Rua Altamiro Guimarães, 907, Sala 01, em Içara </a>.</p>}
           faqId='faq2'
         />
 
         <FAQCard
           faqId='faq3'
           title='Quais os protocolos na pandemia?'
-          content='Desde o início de 2020 todos os atendimentos tiveram mudanças! Uso de máscara é obrigatório para entrar no consultório, tem álcool em gel disponível e eu atendo com máscara N95 e face shield para maior segurança de todos!'
+          content={<p>Desde o início de 2020 todos os atendimentos tiveram mudanças! Uso de máscara é obrigatório para entrar no consultório, tem álcool em gel disponível e eu atendo com máscara N95 e face shield para maior segurança de todos!</p>}
         />
 
         <FAQCard
           faqId='faq4'
           title='É possível parcelar meu tratamento?'
-          content='O pagamento pode ser feito no dinheiro à vista, débito, pix ou até parcelar no cartão e boleto.'
+          content={
+            <p>O pagamento pode ser feito no dinheiro à vista, débito, pix ou até parcelar no cartão e boleto.</p>
+          }
         />
       </Div>
     </Section>

@@ -1,7 +1,9 @@
 import React from 'react'
 import { Div, Text, Button } from 'atomize'
 
-const MobileExperienceText: React.FC<void> = () => {
+interface Props {}
+
+const MobileExperienceText: React.FC = () => {
   return(
     <>
       <Text
@@ -24,7 +26,7 @@ const MobileExperienceText: React.FC<void> = () => {
   )
 }
 
-const DesktopExperienceText: React.FC<void> = () => {
+const DesktopExperienceText: React.FC = () => {
   return(
     <>
       <Text
@@ -47,7 +49,7 @@ const DesktopExperienceText: React.FC<void> = () => {
   )
 }
 
-export const Experience: React.FC<void> = () => {
+export const Experience: React.FC<Props> = () => {
   return(
     <Div
       d='flex'

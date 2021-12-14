@@ -1,7 +1,9 @@
 import React from 'react'
 import { Div, Text, Button, Image } from 'atomize'
 
-export const Navbar: React.FC<void> = () => {
+interface Props {}
+
+export const Navbar: React.FC<Props> = () => {
   return(
     <>
     <Div

@@ -3,16 +3,16 @@ import { Div, Text, Image } from 'atomize'
 import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
 
+interface Props {}
+
 interface GalleryCardProps {
   image: string,
   alt: string,
-  w: string,
-  h: string,
-  title: string,
-  subtitle: string
+  w: {},
+  h: {}
 }
 
-const GalleryCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subtitle }) => {
+const GalleryCard: React.FC<GalleryCardProps> = ({ image, alt, w, h }) => {
   return(
     <Div
       bgImg={ image }
@@ -30,12 +30,12 @@ const GalleryCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subt
   )
 }
 
-export const Gallery: React.FC<void> = () => {
+export const Gallery: React.FC<Props> = () => {
   return(
     <Section>
       <SectionTitle
         title='Galeria de Atendimentos'
-        subtitle={['O único jeito de fazer um ótimo', <br/>, 'trabalho, é amando o que você faz.']}
+        subtitle={<span>O único jeito de fazer um ótimo <br/> trabalho é amando o que você faz.</span>}
       />
 
       <Div m={{ t: '2rem' }} d='flex' justify='space-between' align='center' w='100%'>

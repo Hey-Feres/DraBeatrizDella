@@ -3,6 +3,8 @@ import { Div, Text, Image } from 'atomize'
 import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
 
+interface Props {}
+
 interface ContactIconProps {
   image: string,
   link: string
@@ -27,7 +29,7 @@ const ContactIcon: React.FC<ContactIconProps> = ({ image, link }) => {
   )
 }
 
-export const Contact: React.FC<void> = () => {
+export const Contact: React.FC<Props> = () => {
   return(
     <Section>
       <SectionTitle
