@@ -46,8 +46,8 @@ export const FAQ: React.FC<Props> = () => {
   return(
     <Section>
       <SectionTitle
-        title='Contato'
-        subtitle='Atendimentos. Dúvidas. Orçamentos.'
+        title='FAQ'
+        subtitle='Perguntas Frequentes.'
       />
 
       <Div m={{ t: '2rem' }} d='flex' flexDir='column' justify='space-between' align='center' w='100%'>
