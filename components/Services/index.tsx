@@ -1,5 +1,6 @@
 import React from 'react'
 import { Div, Text, Image } from 'atomize'
+import { SectionTitle } from '../SectionTitle'
 
 interface ServiceCardProps {
   image: String,
@@ -13,18 +14,52 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subtitle }) => {
   return(
     <Div
-      bgImg={ image }
-      w={ w }
-      h={ h }
-      rounded='30px'
-      alt={ alt }
+      bgImg={image}
+      w={w}
+      h={h}
+      rounded={{
+        xs: '30px',
+        lg: '50px'
+      }}
+      alt={alt}
       bgSize='cover'
       bgPos='center'
-      m={{ b: '1rem' }}
+      m={{b: '1rem'}}
     >
-      <Div rounded='30px' bg='overlay' w={ w } h={ h } p={{ x: '1rem', t: '1.5rem' }}>
-        <Text textSize='1.3rem' textColor='white'>{ title }</Text>
-        <Text textColor='white'>{ subtitle }</Text>
+      <Div
+        rounded={{
+          xs: '30px',
+          lg: '50px'
+        }}
+        bg='overlay'
+        w={w}
+        h={h}
+        p={{
+          x: { xs: '1rem', lg: '2rem' },
+          t: { xs: '1.5rem', lg: '2.5rem' }
+        }}
+      >
+        <Text
+          textSize={{
+            xs: '1.3rem',
+            lg: '2.5rem'
+          }}
+          textColor='white'
+        >
+          { title }
+        </Text>
+        <Text
+          textSize={{
+            xs: '.9rem',
+            lg: '1.5rem'
+          }}
+          m={{
+            t: { xs: '.3rem', lg: '.4rem' }
+          }}
+          textColor='white'
+        >
+          { subtitle }
+        </Text>
       </Div>
     </Div>
   )
@@ -37,21 +72,54 @@ export const Services: React.FC<void> = () => {
       flexDir='column'
       justify='space-between'
       align='center'
-      w='95%'
-      m={{ t: '3rem', l: '2.5%' }}
+      w={{
+        xs: '95%',
+        lg: '80%'
+      }}
+      m={{
+        t: { xs: '3rem', lg: '5rem' },
+        l: { xs: '2.5%', lg: '10%'}
+      }}
     >
-      <Div d='flex' flexDir='column' justify='center' align='center'>
-        <Text textAlign='center' textSize='1.7rem' textWeight='900' textColor='primary'>Como Posso Ajudar?</Text>
-        <Text textAlign='center' m={{ t: '.5rem' }} textSize='1.2rem' textColor='secondary'>Atendimento humanizado. <br/> Focado em sua necessidade.</Text>
-      </Div>
+      <SectionTitle
+        title='Como Posso Ajudar?'
+        subtitle={['Atendimento humanizado.', <br/>,  'Focado em sua necessidade.']}
+      />
 
-      <Div m={{ t: '2rem' }} d='flex' justify='space-between' align='center' w='100%'>
-        <Div d='flex' flexDir='column' justify='center' align='space-between' w='100%'>
+      <Div
+        m={{
+          t: { xs: '2rem', lg: '5rem' }
+        }}
+        d='flex'
+        justify='space-between'
+        align='center'
+        w='100%'
+      >
+        <Div
+          d='flex'
+          flexDir='column'
+          justify='center'
+          align={{
+            xs: 'space-between',
+            lg: 'space-between',
+            xl: 'flex-end'
+          }}
+          m={{
+            r: { xl: '1rem' }
+          }}
+          w='100%'
+        >
           <ServiceCard
             image='/images/Person1.jpeg'
             alt='Person1'
-            w='12rem'
-            h='12rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
             title='Clareamentos'
             subtitle='Seu sorriso mais branco.'
           />
@@ -59,8 +127,14 @@ export const Services: React.FC<void> = () => {
           <ServiceCard
             image='/images/Person3.jpeg'
             alt='Person3'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
             title='Tratamento de Canal'
             subtitle='Endodontia, com excelência.'
           />
@@ -68,28 +142,59 @@ export const Services: React.FC<void> = () => {
           <ServiceCard
             image='/images/Person5.jpeg'
             alt='Person5'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
             title='Próteses'
             subtitle='Seu sorriso renovado.'
           />
         </Div>
 
-        <Div d='flex' flexDir='column' justify='center' align='space-between' w='100%'>
+        <Div
+          d='flex'
+          flexDir='column'
+          justify='center'
+          align={{
+            xs: 'space-between',
+            lg: 'space-between',
+            xl: 'flex-start'
+          }}
+          m={{
+            l: { xl: '1rem' }
+          }}
+          w='100%'
+        >
           <ServiceCard
             image='/images/Person2.jpeg'
             alt='Person2'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
             title='Limpezas'
             subtitle='Higiene bucal em dia.'
           />
 
           <ServiceCard
             image='/images/Person4.jpeg'
-            alt='Person3'
-            w='12rem'
-            h='12rem'
+            alt='Person4'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
             title='Dor Orofacial'
             subtitle='Chega de dor.'
           />
@@ -97,8 +202,14 @@ export const Services: React.FC<void> = () => {
           <ServiceCard
             image='/images/Person6.jpeg'
             alt='Person6'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
             title='Restaurações'
             subtitle='Autoestima restaurada.'
           />

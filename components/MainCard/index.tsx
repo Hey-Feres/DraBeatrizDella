@@ -9,18 +9,63 @@ export const MainCard: React.FC<void> = () => {
       justify='space-between'
       align='center'
       p={{ t: '3rem' }}
-      h='40rem'
-      w='95%'
-      m={{ t: '5rem', l: '2.5%' }}
+      h={{
+        xs: '40rem',
+        lg: '50rem'
+      }}
+      w={{
+        xs: '95%',
+        lg: '80%'
+      }}
+      m={{
+        t: {
+          xs: '5rem',
+          lg: '5rem'
+        },
+        l: {
+          xs: '2.5%',
+          lg: '10%'
+        }
+      }}
       shadow='primary'
       rounded='40px'
-      style={{ background: "linear-gradient(0deg, rgba(16,183,183,.15) 0%, rgba(255,255,255,1) 50%)" }}
+      overflow='hidden'
+      bg={{
+        xs: 'linear-gradient(0deg, rgba(16,183,183,.15) 0%, rgba(255,255,255,1) 50%)',
+        lg: 'linear-gradient(355deg, rgba(16,183,183,.15) 0%, rgba(255,255,255,1) 40%)'
+      }}
     >
       <Div d='flex' flexDir='column' justify='center' align='center'>
-        <Text textSize='1.7rem' textWeight='900' textColor='primary'>Cuidando do seu sorriso.</Text>
-        <Text m={{ t: '.5rem' }} textSize='1.6rem' textColor='secondary'>Cuidando da sua autoestima.</Text>
+        <Text
+          textSize={{
+            xs: '1.7rem',
+            lg: '3rem'
+          }}
+          textWeight='900'
+          textColor='primary'
+        >
+          Cuidando do seu sorriso.
+        </Text>
+        <Text
+          m={{ t: '.5rem' }}
+          textSize={{
+            xs: '1.6rem',
+            lg: '2.5rem'
+          }}
+          textColor='secondary'
+          >
+            Cuidando da sua autoestima.
+          </Text>
       </Div>
-      <Image src="/images/Beatriz.png" alt="Beatriz" w='75%' />
+
+      <Image
+        src='/images/Beatriz.png'
+        alt='Beatriz'
+        w={{
+          xs: '80%',
+          lg: '40%'
+        }}
+      />
     </Div>
   )
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import { Div, Text, Image } from 'atomize'
+import { SectionTitle } from '../SectionTitle'
+import { Section } from '../Section'
 
 interface GalleryCardProps {
   image: String,
@@ -16,7 +18,10 @@ const GalleryCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subt
       bgImg={ image }
       w={ w }
       h={ h }
-      rounded='30px'
+      rounded={{
+        xs: '30px',
+        lg: '50px'
+      }}
       alt={ alt }
       bgSize='cover'
       bgPos='center'
@@ -27,66 +32,121 @@ const GalleryCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subt
 
 export const Gallery: React.FC<void> = () => {
   return(
-    <Div
-      d='flex'
-      flexDir='column'
-      justify='space-between'
-      align='center'
-      w='95%'
-      m={{ t: '3rem', l: '2.5%' }}
-    >
-      <Div d='flex' flexDir='column' justify='center' align='center'>
-        <Text textAlign='center' textSize='1.7rem' textWeight='900' textColor='primary'>Como Posso Ajudar?</Text>
-        <Text textAlign='center' m={{ t: '.5rem' }} textSize='1.2rem' textColor='secondary'>Atendimento humanizado. <br/> Focado em sua necessidade.</Text>
-      </Div>
+    <Section>
+      <SectionTitle
+        title='Galeria de Atendimentos'
+        subtitle={['O único jeito de fazer um ótimo', <br/>, 'trabalho, é amando o que você faz.']}
+      />
 
       <Div m={{ t: '2rem' }} d='flex' justify='space-between' align='center' w='100%'>
-        <Div d='flex' flexDir='column' justify='center' align='space-between' w='100%'>
+        <Div
+          d='flex'
+          flexDir='column'
+          justify='center'
+          align={{
+            xs: 'space-between',
+            lg: 'space-between',
+            xl: 'flex-end'
+          }}
+          m={{
+            r: { xl: '1rem' }
+          }}
+          w='100%'
+        >
           <GalleryCard
             image='/images/Gallery1.jpeg'
             alt='Gallery1'
-            w='12rem'
-            h='12rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
           />
 
           <GalleryCard
             image='/images/Gallery3.jpeg'
             alt='Gallery3'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
           />
 
           <GalleryCard
             image='/images/Gallery5.jpeg'
             alt='Gallery5'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
           />
         </Div>
 
-        <Div d='flex' flexDir='column' justify='center' align='space-between' w='100%'>
+        <Div
+          d='flex'
+          flexDir='column'
+          justify='center'
+          align={{
+            xs: 'space-between',
+            lg: 'space-between',
+            xl: 'flex-start'
+          }}
+          m={{
+            l: { xl: '1rem' }
+          }}
+          w='100%'
+        >
           <GalleryCard
             image='/images/Gallery2.jpeg'
             alt='Gallery2'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
           />
 
           <GalleryCard
             image='/images/Gallery4.jpeg'
             alt='Gallery4'
-            w='12rem'
-            h='12rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
           />
 
           <GalleryCard
             image='/images/Gallery6.jpeg'
             alt='Gallery6'
-            w='12rem'
-            h='20rem'
+            w={{
+              xs: '12rem',
+              lg: '28rem'
+            }}
+            h={{
+              xs: '20rem',
+              lg: '40rem'
+            }}
           />
         </Div>
       </Div>
-    </Div>
+    </Section>
   )
 }

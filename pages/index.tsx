@@ -7,6 +7,7 @@ import { Experience } from '../components/Experience'
 import { Gallery } from '../components/Gallery'
 import { Contact } from '../components/Contact'
 import { FAQ } from '../components/FAQ'
+import { Footer } from '../components/Footer'
 
 const Home: React.FC = () => {
   return(
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <Gallery />
       <Contact />
       <FAQ />
+      <Footer />
     </>
   )
 }

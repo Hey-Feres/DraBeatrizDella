@@ -5,7 +5,8 @@ export const Theme = {
     overlay: 'rgba(0, 0, 0, .3)'
   },
   fontFamily: {
-    primary:   'Roboto, sans-serif'
+    primary: 'Roboto, sans-serif',
+    logo: 'Madegra'
   },
   shadows: {
     primary: "0 20px 70px 0 rgba(158, 158, 158, .20)",
