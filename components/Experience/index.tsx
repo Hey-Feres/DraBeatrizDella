@@ -20,7 +20,7 @@ const MobileExperienceText: React.FC = () => {
         textColor='secondary'
         style={{ lineHeight: '55px' }}
       >
-        Atendo desde 2019 no Centro de Especialidades Odontológicas da UNESC, devolvendo sorrisos e amenizando dores.
+        Atendendo desde 2019, devolvendo sorrisos e amenizando dores.
       </Text>
     </>
   )
