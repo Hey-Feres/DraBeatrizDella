@@ -63,6 +63,8 @@ export const MainCard: React.FC<Props> = () => {
       <Image
         src='/images/Beatriz.png'
         alt='Beatriz'
+        loading='eager'
+        placeholder='blur'
         w={{
           xs: '80%',
           lg: '40%'

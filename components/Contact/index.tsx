@@ -1,5 +1,6 @@
 import React from 'react'
-import { Div, Text, Image } from 'atomize'
+import Image from 'next/image'
+import { Div, Text } from 'atomize'
 import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
 
@@ -23,7 +24,7 @@ const ContactIcon: React.FC<ContactIconProps> = ({ image, link }) => {
         justify='center'
         align='center'
       >
-        <Image src={image} w='40px' />
+        <Image src={image} width='40px' height='40px' />
       </Div>
     </a>
   )
