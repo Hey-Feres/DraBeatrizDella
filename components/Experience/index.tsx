@@ -70,7 +70,7 @@ export const Experience: React.FC<Props> = () => {
       <DesktopExperienceText />
 
       <Div w='100%' m={{ t: '3rem' }}>
-        <a href='https://wa.me/4899468322'>
+        <a href='https://wa.me/554899468322'>
           <Button
             bg="#F9F9F9"
             hoverBg='#F1F1F1'
