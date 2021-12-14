@@ -25,7 +25,9 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ image, alt, w, h }) => {
       alt={ alt }
       bgSize='cover'
       bgPos='center'
-      m={{ b: '1rem' }}
+      m={{
+        b: { xs: '.5rem', lg: '1rem' }
+      }}
     />
   )
 }

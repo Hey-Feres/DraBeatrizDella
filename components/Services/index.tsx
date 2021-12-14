@@ -26,7 +26,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, alt, w, h, title, subt
       alt={alt}
       bgSize='cover'
       bgPos='center'
-      m={{b: '1rem'}}
+      m={{
+        b: { xs: '.5rem', lg: '1rem' }
+      }}
     >
       <Div
         rounded={{
