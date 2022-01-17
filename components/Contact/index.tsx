@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Div, Text } from 'atomize'
 import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
+import { linkTo } from '../../utils/linkTo'
 
 interface Props {}
 
@@ -13,7 +14,7 @@ interface ContactIconProps {
 
 const ContactIcon: React.FC<ContactIconProps> = ({ image, link }) => {
   return(
-    <a href={link}>
+    <a href={link} target="_blank">
       <Div
         w='5rem'
         h='5rem'

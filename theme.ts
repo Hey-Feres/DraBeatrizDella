@@ -2,7 +2,8 @@ export const Theme = {
   colors: {
     primary:   '#10B7B7',
     secondary: '#858585',
-    overlay: 'rgba(0, 0, 0, .3)'
+    visitCardBg: '#FDF0E6',
+    overlay: 'rgba(0, 0, 0, .3)',
   },
   fontFamily: {
     primary: 'Roboto, sans-serif',

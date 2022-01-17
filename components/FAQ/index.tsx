@@ -3,7 +3,7 @@ import { Div, Text, Image, Icon } from 'atomize'
 import { Button, Collapse } from 'react-bootstrap'
 import { SectionTitle } from '../SectionTitle'
 import { Section } from '../Section'
-import { isAppleDevice } from '../../utils/isAppleDevice'
+import { linkTo } from '../../utils/linkTo'
 
 interface Props {}
 
@@ -35,7 +35,7 @@ const FAQCard: React.FC<ServiceCardProps> = ({ title, content, faqId }) => {
 
       <Collapse in={open}>
         <Div id={faqId} d='flex' justify='flex-start' w='100%' p={{ x: '.2rem' }}>
-          <Text w='90%' textColor='secondary' textSize='1.1rem' style={{ lineHeight: '30px' }}> {content} </Text>
+          <Text w='90%' textColor='secondary' style={{ lineHeight: '30px' }}> {content} </Text>
         </Div>
       </Collapse>
     </Div>
@@ -54,32 +54,32 @@ export const FAQ: React.FC<Props> = () => {
         <FAQCard
           faqId='faq4'
           title='Como faço um agendamento?'
-          content={<p>Você pode agendar uma avaliação diretamente comigo, <a href='https://wa.me/554899468322'>pelo Whatsapp</a> ou <a href='https://www.instagram.com/drabeatrizdella'>pelo Instagram</a>.</p>}
+          content={<p style={{ fontSize: "1.2rem" }}>Você pode agendar uma avaliação diretamente comigo, <a href={ linkTo("whatsapp") }>pelo Whatsapp</a> ou <a href={ linkTo("instagram") }>pelo Instagram</a>.</p>}
         />
 
         <FAQCard
           faqId='faq1'
           title='Qual minha formação?'
-          content={<p>Formei em 2021 pela Unesc e atualmente curso pós-graduação em Endodontia pela ABDC Magic School</p>}
+          content={<p style={{ fontSize: "1.2rem" }}>Formei em 2021 pela Unesc e atualmente curso pós-graduação em Endodontia pela ABDC Magic School</p>}
         />
 
         <FAQCard
           title='Onde eu atendo?'
-          content={<p>Estou atendendo no consultório Dra. Renata Dal Molin, na <a href={ isAppleDevice() ? 'http://maps.apple.com/?address=907,Rua+Altamiro+Guimarães,Icara,Santa+Catarina' : 'https://goo.gl/maps/gw2uB9q42LW7E6gU7' }> Rua Altamiro Guimarães, 907, Sala 01, em Içara </a>.</p>}
+          content={<p style={{ fontSize: "1.2rem" }}>Estou atendendo no consultório Dra. Renata Dal Molin, na <a href={ linkTo("icaraLocation") }> Rua Altamiro Guimarães, 907, Sala 01, em Içara </a>. <br/> Também atendo na Gold Dent na, <a href={ linkTo("icaraLocation") }> Rua Valentin Pizzetti, 321, em Criciúma. </a> </p>}
           faqId='faq2'
         />
 
         <FAQCard
           faqId='faq3'
           title='Quais os protocolos na pandemia?'
-          content={<p>Desde o início de 2020 todos os atendimentos tiveram mudanças! Uso de máscara é obrigatório para entrar no consultório, tem álcool em gel disponível e eu atendo com máscara N95 e face shield para maior segurança de todos!</p>}
+          content={<p style={{ fontSize: "1.2rem" }}>Desde o início de 2020 todos os atendimentos tiveram mudanças! Uso de máscara é obrigatório para entrar no consultório, tem álcool em gel disponível e eu atendo com máscara N95 e face shield para maior segurança de todos!</p>}
         />
 
         <FAQCard
           faqId='faq4'
           title='É possível parcelar meu tratamento?'
           content={
-            <p>O pagamento pode ser feito no dinheiro à vista, débito, pix ou até parcelar no cartão e boleto.</p>
+            <p style={{ fontSize: "1.2rem" }}>O pagamento pode ser feito no dinheiro à vista, débito, pix ou até parcelar no cartão e boleto.</p>
           }
         />
       </Div>
