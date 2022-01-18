@@ -8,7 +8,7 @@ export const linkTo = (name) => {
 	const criciumaLocationGoogleMaps = "https://goo.gl/maps/AWjg9NyQ73zgUv2s6"
 
 	const linksDic = {
-		site: "http://localhost:3000",
+		site: "https://dra-beatriz-della-ebzx2dsi7-hey-feres.vercel.app",
 		instagram: "https://www.instagram.com/drabeatrizdella",
 		whatsapp: "https://wa.me/554899468322",
 		phone: "tel:4899468322",
