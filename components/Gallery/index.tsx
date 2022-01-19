@@ -40,7 +40,7 @@ export const Gallery: React.FC<Props> = () => {
         subtitle={<span>O único jeito de fazer um ótimo <br/> trabalho é amando o que você faz.</span>}
       />
 
-      <Div m={{ t: '2rem' }} d='flex' justify='space-between' align='center' w='100%'>
+      <Div bg="black" m={{ t: '2rem' }} d='flex' justify='space-between' align='center' w='100%'>
         <Div
           d='flex'
           flexDir='column'

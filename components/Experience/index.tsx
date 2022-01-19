@@ -59,11 +59,11 @@ export const Experience: React.FC<Props> = () => {
       p={{ b: '1rem', x: '1rem' }}
       w={{
         xs: '95%',
-        lg: '80%'
+        lg: '70%'
       }}
       m={{
         t: { xs: '3rem', lg: '5rem' },
-        l: { xs: '2.5%', lg: '10%'}
+        l: { xs: '2.5%', lg: '15%'}
       }}
     >
       <MobileExperienceText />

@@ -17,7 +17,7 @@ export const MainCard: React.FC<Props> = () => {
       }}
       w={{
         xs: '95%',
-        lg: '80%'
+        lg: '70%'
       }}
       m={{
         t: {
@@ -26,7 +26,7 @@ export const MainCard: React.FC<Props> = () => {
         },
         l: {
           xs: '2.5%',
-          lg: '10%'
+          lg: '15%'
         }
       }}
       shadow='primary'
